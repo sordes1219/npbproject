@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div>
+  <h2>投球データ解析</h2>
+    <table border="1" width=500>
+      <tr>
+        <th>Index</th>
+        <th>球種</th>
+        <th>投手</th>
+        <th>打者</th>
+      </tr>
+      {% for index,row in df.iterrows %}
+        <tr>
+          <td>{{index}}</td>
+          <td>{{row.kyusyumark}}</td>
+          <td>{{row.pitcher}}</td>
+          <td>{{row.batter}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+</div>
+{% endblock %}

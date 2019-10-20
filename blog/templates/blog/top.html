@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div>
+  <h2>検索条件</h2>
+  <form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">検索実行</button>
+  </form>
+
+</div>
+{% endblock %}
