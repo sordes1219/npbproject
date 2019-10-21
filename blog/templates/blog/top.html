@@ -5,8 +5,19 @@
   <h2>検索条件</h2>
   <form method="POST" class="post-form">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="save btn btn-default">検索実行</button>
+    <!-- <p><label for="balltype">球種：</label>
+    <select name="balltype">
+    {% for val in balltype %}
+      <option value={{ val }}>{{ val }}</option>
+    {% endfor %}
+    </select></p>
+    <p><label for="batter">打者：</label>
+    <select name="batter">
+    {% for val in batter %}
+      <option value={{ val }}>{{ val }}</option>
+    {% endfor %}
+    </select></p> -->
+    <p><button type="submit" class="save btn btn-default">検索実行</button></p>
   </form>
-
 </div>
 {% endblock %}
